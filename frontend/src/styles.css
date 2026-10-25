@@ -32,6 +32,7 @@ a { color: inherit; text-decoration: none; }
 .nav-item:hover { background: #f6f8f5; color: var(--green); }
 .nav-item.selected { background: #edf4ee; color: #1c513a; font-weight: 700; }
 .nav-icon { font-size: 20px; width: 21px; text-align: center; line-height: 1; }
+.mobile-signout { display: none; }
 .sidebar-bottom { margin-top: auto; }
 .help-card { display: flex; gap: 11px; padding: 14px 12px; margin-bottom: 18px; border: 1px solid #edf0ec; border-radius: 9px; }
 .help-icon { flex: 0 0 22px; height: 22px; display: grid; place-items: center; border-radius: 50%; color: #477957; background: #edf5ee; font: 700 12px 'Manrope', sans-serif; }
@@ -191,10 +192,13 @@ a { color: inherit; text-decoration: none; }
   .auth-story { padding: 31px; }
 }
 @media (max-width: 650px) {
-  .sidebar { position: fixed; inset: auto 0 0; width: 100%; height: 62px; flex-direction: row; align-items: center; justify-content: space-around; padding: 5px 13px; border-right: 0; border-top: 1px solid #edf0eb; }
+  .sidebar { position: fixed; inset: auto 0 0; width: 100%; height: 62px; flex-direction: row; align-items: center; justify-content: space-around; gap: 5px; padding: 5px 8px; border-right: 0; border-top: 1px solid #edf0eb; }
   .sidebar > .brand, .sidebar-label, .sidebar-bottom { display: none; }
-  .side-nav { display: flex; width: 100%; justify-content: space-around; }
-  .nav-item { height: 46px; min-width: 130px; justify-content: center; }
+  .side-nav { display: flex; flex: 1; min-width: 0; justify-content: space-around; }
+  .nav-item { flex: 1; height: 46px; min-width: 0; justify-content: center; gap: 5px; padding: 0 4px; }
+  .mobile-signout { display: flex; flex: 0 0 auto; align-items: center; justify-content: center; gap: 4px; height: 46px; padding: 0 8px; border: 0; border-radius: 8px; background: transparent; color: #748078; font-size: 13px; font-weight: 600; }
+  .mobile-signout:hover { background: #f6f8f5; color: var(--green); }
+  .mobile-signout .nav-icon { width: auto; }
   .main-panel { margin-left: 0; padding-bottom: 62px; }
   .topbar { height: 54px; padding: 0 19px; }
   .page-content { padding: 27px 18px 17px; }

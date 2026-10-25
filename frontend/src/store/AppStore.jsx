@@ -148,7 +148,12 @@ export function AppStoreProvider({ children }) {
           idempotencyKey: crypto.randomUUID(),
         }),
       })
-      setNotice({ type: 'success', text: result.message || 'Transfer completed.' })
+      const emailNotice = result.emailSent === true
+        ? ' A confirmation email was sent to your registered email address.'
+        : result.emailSent === false
+          ? ' The transfer completed, but we could not send the confirmation email.'
+          : ''
+      setNotice({ type: 'success', text: `${result.message || 'Transfer completed.'}${emailNotice}` })
       setTransferForm({ toAccount: '', amount: '' })
       setBalance(null)
     } catch (error) {

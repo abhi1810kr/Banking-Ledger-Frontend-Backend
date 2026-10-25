@@ -13,6 +13,9 @@ export default function Sidebar({ user, page, onNavigate, onSignOut }) {
           <span className="nav-icon">↗</span> Transactions
         </button>
       </nav>
+      <button className="mobile-signout" onClick={onSignOut}>
+        <span className="nav-icon" aria-hidden="true">↪</span> Logout
+      </button>
       <div className="sidebar-bottom">
         <div className="help-card">
           <span className="help-icon">i</span>

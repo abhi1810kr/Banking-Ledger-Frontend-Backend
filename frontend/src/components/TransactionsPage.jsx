@@ -23,7 +23,7 @@ export default function TransactionsPage({
         <div className="transfer-card">
           <div className="transfer-card-heading">
             <span className="transfer-icon">↗</span>
-            <div><h2>New transfer</h2><p>Transfers are recorded securely in your ledger.</p></div>
+            <div><h2>New transfer</h2><p>Transfers are recorded securely, with an email confirmation after each completed transfer.</p></div>
           </div>
           <form className="form-stack transfer-form" onSubmit={onSubmitTransfer}>
             <label>
